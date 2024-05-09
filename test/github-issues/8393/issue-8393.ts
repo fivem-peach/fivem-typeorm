@@ -4,7 +4,7 @@ import {
     closeTestingConnections,
     reloadTestingDatabases,
 } from "../../utils/test-utils"
-import { DataSource, UpdateValuesMissingError } from "../../../src/"
+import { DataSource, UpdateValuesMissingError } from "../../../src"
 import { expect } from "chai"
 import { Post } from "./entity/Post"
 

@@ -5,7 +5,7 @@ import {
     closeTestingConnections,
     createTestingConnections,
     reloadTestingDatabases,
-} from "../../../test/utils/test-utils"
+} from "../../utils/test-utils"
 
 describe("github issues > #6947 Custom primary column for TreeRepository based entities unable to get tree descendants", () => {
     let connections: DataSource[]

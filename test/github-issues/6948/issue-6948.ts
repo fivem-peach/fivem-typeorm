@@ -5,7 +5,7 @@ import {
     closeTestingConnections,
     createTestingConnections,
     reloadTestingDatabases,
-} from "../../../test/utils/test-utils"
+} from "../../utils/test-utils"
 
 describe("github issues > #6948 TreeRepository's findRoots query incorrectly when using a custom primary key", () => {
     let connections: DataSource[]

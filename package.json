@@ -95,7 +95,7 @@
   "devDependencies": {
     "@tsconfig/node16": "^16.1.1",
     "@types/chai": "^4.3.4",
-    "@types/chai-as-promised": "^7.1.5",
+    "@types/chai-as-promised": "^7.1.8",
     "@types/debug": "^4.1.7",
     "@types/gulp-rename": "^2.0.6",
     "@types/gulp-sourcemaps": "^0.0.38",

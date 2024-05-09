@@ -20,12 +20,12 @@
     "strictPropertyInitialization": false,
     "stripInternal": true,
     "useUnknownInCatchVariables": false,
-    "types": ["@citizenfx/server"]
+    "types": ["./types/", "@citizenfx/server"]
   },
   "include": [
     "sample",
     "src",
-    "test",
+    "_test",
     "*.ts"
   ],
   "exclude": [

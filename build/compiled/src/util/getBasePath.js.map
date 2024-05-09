@@ -1,0 +1,1 @@
+{"version":3,"file":"getBasePath.js","sourceRoot":"","sources":["../../../../src/util/getBasePath.ts"],"names":[],"mappings":";;;AAAO,MAAM,WAAW,GAAG,GAAG,EAAE;IAC5B,MAAM,YAAY,GAAG,sBAAsB,EAAE,CAAA;IAC7C,MAAM,YAAY,GAAG,eAAe,CAAC,YAAY,CAAC,CAAA;IAElD,OAAO,YAAY,CAAC,OAAO,CAAC,iBAAiB,EAAE,IAAI,CAAC,CAAA;AACxD,CAAC,CAAA;AALY,QAAA,WAAW,eAKvB"}

@@ -6,7 +6,7 @@ import {
 } from "../../utils/test-utils"
 import { DataSource } from "../../../src/index"
 import { expect } from "chai"
-import { User } from "../8832/entity/User"
+import { User } from "./entity/User"
 import { Address } from "./entity/Address"
 import { ConnectionMetadataBuilder } from "../../../src/connection/ConnectionMetadataBuilder"
 import { EntityMetadataValidator } from "../../../src/metadata-builder/EntityMetadataValidator"
@@ -64,13 +64,13 @@ describe("github issues > #8832 Add uuid, inet4, and inet6 types for mariadb", (
                         DATA_TYPE: string
                     }[] = await connection.query(
                         `
-                        SELECT 
+                        SELECT
                             COLUMN_NAME,
-                            DATA_TYPE 
-                        FROM INFORMATION_SCHEMA.COLUMNS 
+                            DATA_TYPE
+                        FROM INFORMATION_SCHEMA.COLUMNS
                         WHERE
                             TABLE_SCHEMA = ?
-                            AND TABLE_NAME = ? 
+                            AND TABLE_NAME = ?
                             AND COLUMN_NAME IN (?, ?, ?, ?)
                     `,
                         [
@@ -146,13 +146,13 @@ describe("github issues > #8832 Add uuid, inet4, and inet6 types for mariadb", (
                         CHARACTER_MAXIMUM_LENGTH: string
                     }[] = await connection.query(
                         `
-                    SELECT 
+                    SELECT
                         DATA_TYPE,
                         CHARACTER_MAXIMUM_LENGTH
-                    FROM INFORMATION_SCHEMA.COLUMNS 
+                    FROM INFORMATION_SCHEMA.COLUMNS
                     WHERE
                         TABLE_SCHEMA = ?
-                        AND TABLE_NAME = ? 
+                        AND TABLE_NAME = ?
                         AND COLUMN_NAME = ?
                 `,
                         [connection.driver.database, "UuidEntity", "id"],
