@@ -3,6 +3,7 @@
 .vscode/
 .idea/
 coverage/
+build/
 node_modules/
 /ormconfig.json
 ormlogs.log

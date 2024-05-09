@@ -1,3 +1,0 @@
-[submodule "build/compiled/src"]
-	path = build/compiled/src
-	url = https://github.com/fivem-peach/fivem-typeorm
