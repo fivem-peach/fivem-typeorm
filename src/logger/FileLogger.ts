@@ -1,9 +1,9 @@
 import { FileLoggerOptions, LoggerOptions } from "./LoggerOptions"
 import { LogLevel, LogMessage } from "./Logger"
-import appRootPath from "app-root-path"
 import { QueryRunner } from "../query-runner/QueryRunner"
 import { PlatformTools } from "../platform/PlatformTools"
 import { AbstractLogger } from "./AbstractLogger"
+import { getBasePath } from "../util/getBasePath"
 
 /**
  * Performs logging of the events in TypeORM.
@@ -94,7 +94,7 @@ export class FileLogger extends AbstractLogger {
      */
     protected write(strings: string | string[]) {
         strings = Array.isArray(strings) ? strings : [strings]
-        const basePath = appRootPath.path + "/"
+        const basePath = getBasePath() + "/"
         let logPath = "ormlogs.log"
         if (this.fileLoggerOptions && this.fileLoggerOptions.logPath) {
             logPath = PlatformTools.pathNormalize(

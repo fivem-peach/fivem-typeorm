@@ -14,7 +14,7 @@ import { filepathToName } from "../../../../src/util/PathUtils"
 import rimraf from "rimraf"
 import path from "path"
 import fs from "fs"
-import appRoot from "app-root-path"
+import { getBasePath } from "../../../../src/util/getBasePath"
 
 const VALID_NAME_REGEX = /^(?!sqlite_).{1,63}$/
 
@@ -64,7 +64,7 @@ describe("multi-database > basic-functionality", () => {
 
     describe("multiple databases", () => {
         let connections: DataSource[]
-        const tempPath = path.resolve(appRoot.path, "temp")
+        const tempPath = path.resolve(getBasePath(), "temp")
         const attachAnswerPath = path.join(
             tempPath,
             "filename-sqlite.attach.db",

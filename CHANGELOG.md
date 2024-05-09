@@ -1634,12 +1634,10 @@ export const MyDataSources = {
 -   do not mutate connection options ([#5078](https://github.com/typeorm/typeorm/issues/5078)) ([1047989](https://github.com/typeorm/typeorm/commit/1047989))
 -   mysql driver query streaming ([#5036](https://github.com/typeorm/typeorm/issues/5036)) ([aff2f56](https://github.com/typeorm/typeorm/commit/aff2f56))
 -   remove consrc usage (postgres,cockroachdb) ([#4333](https://github.com/typeorm/typeorm/issues/4333)) ([ce7cb16](https://github.com/typeorm/typeorm/commit/ce7cb16)), closes [#4332](https://github.com/typeorm/typeorm/issues/4332)
--   repo for app-root-path in lock file ([#5052](https://github.com/typeorm/typeorm/issues/5052)) ([f0fd192](https://github.com/typeorm/typeorm/commit/f0fd192))
 -   resolve MySQL unique index check when bigNumberStrings is false ([#4822](https://github.com/typeorm/typeorm/issues/4822)) ([d205574](https://github.com/typeorm/typeorm/commit/d205574)), closes [#2737](https://github.com/typeorm/typeorm/issues/2737)
 -   resolve sorting bug for several mongo vesions with typeorm migration ([#5121](https://github.com/typeorm/typeorm/issues/5121)) ([cb771a1](https://github.com/typeorm/typeorm/commit/cb771a1)), closes [#5115](https://github.com/typeorm/typeorm/issues/5115)
 -   throwing error on duplicate migration names [#4701](https://github.com/typeorm/typeorm/issues/4701) ([#4704](https://github.com/typeorm/typeorm/issues/4704)) ([3e4dc9f](https://github.com/typeorm/typeorm/commit/3e4dc9f))
 -   unescaped column name in order clause of "migrations" ([#5108](https://github.com/typeorm/typeorm/issues/5108)) ([c0c8566](https://github.com/typeorm/typeorm/commit/c0c8566))
--   upgrade app-root-path ([#5023](https://github.com/typeorm/typeorm/issues/5023)) ([7f87f0c](https://github.com/typeorm/typeorm/commit/7f87f0c))
 
 ### Features
 

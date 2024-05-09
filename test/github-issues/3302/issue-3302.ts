@@ -1,5 +1,4 @@
 import "reflect-metadata"
-import appRootPath from "app-root-path"
 import sinon from "sinon"
 import { DataSource } from "../../../src"
 import {
@@ -8,13 +7,14 @@ import {
     closeTestingConnections,
 } from "../../utils/test-utils"
 import { PlatformTools } from "../../../src/platform/PlatformTools"
+import { getBasePath } from "../../../src/util/getBasePath"
 
 describe("github issues > #3302 Tracking query time for slow queries and statsd timers", () => {
     let connections: DataSource[]
     let stub: sinon.SinonStub
     let sandbox: sinon.SinonSandbox
-    const beforeQueryLogPath = appRootPath + "/before-query.log"
-    const afterQueryLogPath = appRootPath + "/after-query.log"
+    const beforeQueryLogPath = getBasePath() + "/before-query.log"
+    const afterQueryLogPath = getBasePath() + "/after-query.log"
 
     before(async () => {
         connections = await createTestingConnections({

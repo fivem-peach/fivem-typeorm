@@ -1,4 +1,3 @@
-import appRootPath from "app-root-path"
 import path from "path"
 import { DataSourceOptions } from "../data-source/DataSourceOptions"
 import { PlatformTools } from "../platform/PlatformTools"
@@ -6,6 +5,7 @@ import { ConnectionOptionsEnvReader } from "./options-reader/ConnectionOptionsEn
 import { TypeORMError } from "../error"
 import { isAbsolute } from "../util/PathUtils"
 import { importOrRequireFile } from "../util/ImportUtils"
+import { getBasePath } from "../util/getBasePath"
 
 /**
  * Reads connection options from the ormconfig.
@@ -259,7 +259,7 @@ export class ConnectionOptionsReader {
     protected get baseDirectory(): string {
         if (this.options && this.options.root) return this.options.root
 
-        return appRootPath.path
+        return getBasePath()
     }
 
     /**

@@ -8,6 +8,7 @@ import { DataSource } from "../../../../../src/data-source/DataSource"
 import { Post } from "./entity/Post"
 import { Category } from "./entity/Category"
 import { EntitySchema } from "../../../../../src"
+import { getBasePath } from "../../../../../src/util/getBasePath"
 
 /**
  * Because lazy relations are overriding prototype is impossible to run these tests on multiple connections.
@@ -15,9 +16,8 @@ import { EntitySchema } from "../../../../../src"
  */
 describe("basic-lazy-relations", () => {
     let UserSchema: any, ProfileSchema: any
-    const appRoot = require("app-root-path")
     const resourceDir =
-        appRoot +
+        getBasePath() +
         "/test/functional/relations/lazy-relations/basic-lazy-relation/"
     UserSchema = new EntitySchema<any>(
         require(resourceDir + "schema/user.json"),
